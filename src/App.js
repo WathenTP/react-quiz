@@ -1,28 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Question from './components/Question';
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+    <div className="App">
+      <div className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <h2>Thom's Big Fat Quiz of the Year!</h2>
       </div>
-    );
+      <Question content="Who Killed Anakin Skywalker?" />
+    </div>
+    )
   }
-}
+};
 
 export default App;
+
+
