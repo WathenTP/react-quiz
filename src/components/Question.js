@@ -1,16 +1,4 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
+import propTypes from "prop-types"
 import React from 'react';
   function Question(props) {
     return (
@@ -18,6 +6,6 @@ import React from 'react';
     );
   }
   Question.propTypes = {
-    content: React.PropTypes.string.isRequired
+    content: propTypes.string.isRequired
   };
   export default Question;
