@@ -1,4 +1,4 @@
-import propTypes from "prop-types"
+import propTypes from 'prop-types'
 import React from 'react';
   function Question(props) {
     return (

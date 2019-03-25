@@ -1,4 +1,5 @@
 import React from 'react';
+import propTypes from 'prop-types';
 
 function AnswerOption(props) {
     return (
@@ -20,3 +21,12 @@ function AnswerOption(props) {
             </li>
     );
 }
+
+AnswerOption.propTypes = {
+    answerType: propTypes.string.isRequired,
+    answerContent: propTypes.string.isRequired,
+    answer: propTypes.string.isRequired,
+    onAnswerSelected: propTypes.func.isRequired
+};
+
+export default AnswerOption;
