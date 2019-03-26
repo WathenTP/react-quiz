@@ -19,6 +19,19 @@ function Quiz(props) {
     );
 }
 
+function renderAnswerOptions(key) {
+    return (
+      <AnswerOption
+        key={key.content}
+        answerContent={key.content}
+        answerType={key.type}
+        answer={props.answer}
+        questionId={props.questionId}
+        onAnswerSelected={props.onAnswerSelected}
+      />
+    );
+  }
+
 Quiz.propTypes = {
     answer: propTypes.string.isRequired,
     answerOptions: propTypes.array.isRequired,
