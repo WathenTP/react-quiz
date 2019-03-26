@@ -7,6 +7,7 @@ import quizQuestions from './api/quizQuestions';
 class App extends Component {
   constructor(props) {
     super(props);
+    this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
     this.state = {
      counter: 0,
      questionId: 1,
@@ -19,6 +20,7 @@ class App extends Component {
        sony: 0
      },
      result: ''
+     
     };
   }
   componentWillMount() {
