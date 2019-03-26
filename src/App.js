@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Question from './components/Question';
 import quizQuestions from './api/quizQuestions';
+import update from 'react-addons-update';
 
 class App extends Component {
   constructor(props) {
@@ -44,6 +45,26 @@ class App extends Component {
     }
     return array;
   };
+  setUserAnswer(answer) {
+    const updatedAnswersCount = update(this.state.answersCount, {
+      [answer]: {$apply: (currentValue) => currentValue + 1}
+    });
+    this.setState({
+      answersCount: updatedAnswersCount,
+      answer: answer
+    });
+  }
+  setNextQuestion() {
+    const counter = this.state.counter + 1;
+    const questionId = this.state.questionId + 1;
+    this.setState({
+      counter: counter,
+      questionId: questionId,
+      question: quizQuestions[counter].question,
+      answerOptions: quizQuestions[counter].answers,
+      answer: ''
+    });
+  }
   handleAnswerSelected(event) {
     this.setUserAnswer(event.currentTarget.value);
     if (this.state.questionId < quizQuestions.length) {
@@ -60,7 +81,7 @@ class App extends Component {
         <h2>Thom's Big Fat Quiz of the Year!</h2>
       </div>
       <Question content="Who Killed Anakin Skywalker?" />
-      <Quiz
+      <quizQuestions
           answer={this.state.answer}
           answerOptions={this.state.answerOptions}
           questionId={this.state.questionId}
