@@ -80,6 +80,13 @@ class App extends Component {
     const maxAnswerCount = Math.max.apply(null, answersCountValues);
     return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
   }
+  setResults (result) {
+    if (result.length === 1) {
+      this.setState({ result: result[0] });
+    } else {
+      this.setState({ result: 'Undetermined' });
+    }
+  }
   render () {
     return (
     <div>
