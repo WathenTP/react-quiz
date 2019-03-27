@@ -70,17 +70,24 @@ class App extends Component {
     if (this.state.questionId < quizQuestions.length) {
         setTimeout(() => this.setNextQuestion(), 300);
       } else {
-        // do nothing for now
+          setTimeout(() => this.setResults(this.getResults()), 300);
       }
+  }
+  getResults() {
+    const answersCount = this.state.answersCount;
+    const answersCountKeys = Object.keys(answersCount);
+    const answersCountValues = answersCountKeys.map((key) => answersCount[key]);
+    const maxAnswerCount = Math.max.apply(null, answersCountValues);
+    return answersCountKeys.filter((key) => answersCount[key] === maxAnswerCount);
   }
   render () {
     return (
-    <div className="App">
+    <div>
       <div className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <h2>Thom's Big Fat Quiz of the Year!</h2>
       </div>
-      <Question content="Who Killed Anakin Skywalker?" />
+      <Question content="Fundamental Questions on the Star Wars Universe!" />
       <quizQuestions
           answer={this.state.answer}
           answerOptions={this.state.answerOptions}
