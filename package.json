@@ -8,7 +8,7 @@
     "react-dom": "^16.8.4",
     "react-scripts": "2.1.8"
   },
-  "homepage": "http://myname.github.io/myapp",
+  "homepage": "https://wathentp.github.io/react-quiz",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
