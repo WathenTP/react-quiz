@@ -4,7 +4,7 @@ var quizQuestions = [
         question: "What faction would you support during the 2nd Galactic Civil War?",
         answers: [
             {
-                type: "Galactic Empire",
+                type: "GalacticEmpire",
                 content: "Sith"
             },
             {
@@ -12,7 +12,7 @@ var quizQuestions = [
                 content: "Seperatists"
             },
             {
-                type: "Galactic Senate",
+                type: "GalacticSenate",
                 content: "Jedi"
             }
         ]
@@ -21,15 +21,15 @@ var quizQuestions = [
         question: "Which Hero would you like to fight with?",
         answers: [
             {
-                type: "Sith",
+                type: "GalacticEmpire",
                 content: "Emperor Palpatine"
             },
             {
-                type: "Seperatists",
+                type: "Confederacy",
                 content: "General Grevious"
             },
             {
-                type: "Jedi",
+                type: "GalacticSenate",
                 content: "Yoda"
             }
         ]
@@ -38,15 +38,15 @@ var quizQuestions = [
         question: "Which of these films is best?",
         answers: [
             {
-                type: "Prequel",
+                type: "GalacticEmpire",
                 content: "Revenge of the Sith"
             },
             {
-                type: "Original",
+                type: "Confederacy",
                 content: "The Empire Strikes Back"
             },
             {
-                type: "Sequel",
+                type: "GalacticSenate",
                 content: "Don't be stupid"
             }
         ]
@@ -55,15 +55,15 @@ var quizQuestions = [
         question: "Who is the strongest Jedi",
         answers: [
             {
-                type: "Swordsman",
+                type: "GalacticEmpire",
                 content: "Mace Windu"
             },
             {
-                type: "Force",
+                type: "Confederacy",
                 content: "Yoda"
             },
             {
-                type: "Strategist",
+                type: "GalacticSenate",
                 content: "Obi-Wan Kenobi"
             }
         ]
@@ -72,15 +72,15 @@ var quizQuestions = [
         question: "Why does Ryan Johnson destroy that which is beautiful?",
         answers: [
             {
-                type: "Sadomasochism",
+                type: "GalacticEmpire",
                 content: "Killing Snoke off without explanation"
             },
             {
-                type: "Mental Retardation",
+                type: "Confederacy",
                 content: "Not providing Rey with a backstory"
             },
             {
-                type: "Pychopathy",
+                type: "GalacticSenate",
                 content: "Not having 1 lightsabre duel"
             }
         ]
