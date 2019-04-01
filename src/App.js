@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import Question from './components/Question';
 import quizQuestions from './api/quizQuestions';
+import Results from './components/Results';
 import update from 'react-addons-update';
 
 class App extends Component {
@@ -87,6 +88,23 @@ class App extends Component {
       this.setState({ result: 'Undetermined' });
     }
   }
+  renderQuiz() {
+    return (
+      <quizQuestions
+        answer={this.state.answer}
+        answerOptions={this.state.answerOptions}
+        questionId={this.state.questionId}
+        question={this.state.question}
+        questionTotal={quizQuestions.length}
+        onAnswerSelected={this.handleAnswerSelected}
+      />
+    );
+  }
+  renderResult() {
+    return (
+      <Results quizResult={this.state.result} />
+    );
+  }
   render () {
     return (
     <div className="App">
@@ -95,14 +113,7 @@ class App extends Component {
         <h2>Thom's Big Fat Quiz of the Year!</h2>
       </div>
       <Question content="Fundamental Questions on the Star Wars Universe!" />
-      <quizQuestions
-          answer={this.state.answer}
-          answerOptions={this.state.answerOptions}
-          questionId={this.state.questionId}
-          question={this.state.question}
-          questionTotal={quizQuestions.length}
-          onAnswerSelected={this.handleAnswerSelected}
-        />
+      {this.state.result ? this.renderResult() : this.renderQuiz()}
     </div>
     )
   };
